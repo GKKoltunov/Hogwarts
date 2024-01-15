@@ -26,6 +26,9 @@ line-height: normal;
 letter-spacing: -1.28px;
 }
 
+h1:hover{
+  cursor: pointer;
+}
 
 
 .header__p{
@@ -108,7 +111,10 @@ font-weight: 800;
 line-height: normal;
 margin-top: 24px;
 margin-left: 24px;
+
 }
+
+
 
 .actor, .gender, .house, .wand-core, .alive{
   color: var(--Heading-Title-Color, #152536);
@@ -126,6 +132,7 @@ border: 1px solid  #DEE2E6;
 background: #FFF;
 width: 334px;
 padding-bottom: 24px;
+position: relative;
 }
 
 .ava{
@@ -152,6 +159,58 @@ height: 334px;
   gap: 20px;
   flex-wrap: wrap;
   max-width: 700px;
+}
+
+.like-white{
+  position:absolute;
+  top: 12px;
+  right: 12px;
+  width: 48px;
+  height: 48px;
+}
+
+.like-red{
+  display: none;
+    position:absolute;
+  top: 12px;
+  right: 12px;
+  width: 48px;
+  height: 48px;
+  
+  z-index: 10;
+}
+
+
+.checkbox{
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+ z-index: 11;
+opacity: 0;
+}
+
+.circle{
+  position: absolute;
+  display: block;
+  top: 12px;
+  right: 12px;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  background-color: #FFF;
+  border-radius: 50%;
+}
+
+.like{
+  color: lightgray;
+    width: 24px;
+  height: 24px;
+}
+.checkbox:checked +.circle svg path{
+  transition: 0.5s;
+  fill: #F44336;
 }
 
 
